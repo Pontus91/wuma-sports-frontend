@@ -1,12 +1,8 @@
 import React from 'react';
-import SlideView from '../SlideView/SlideView';
 import * as Icon from 'react-feather';
 
 import {
   StyledContainer,
-  StyledSlogan,
-  StyledRegister,
-  StyledButton,
   StyledPublicInfo,
   StyledInfoHeader,
   StyledHeaderText,
@@ -14,21 +10,19 @@ import {
   StyledFocusInfo,
   StyledFocusMinorInfo,
   StyledInfoWrapperMiddle,
+  StyledIconDiv
 
 } from './StyledStartPage';
 
 const Startpage = () => {
   return (
     <StyledContainer>
-      <StyledSlogan>Skapa turneringar. Spara Statistik. Hitta medspelare.</StyledSlogan>
-      <StyledRegister><StyledButton>Registrera dig gratis</StyledButton></StyledRegister>
-      <SlideView />
       <StyledPublicInfo>
         <StyledInfoHeader>
           <StyledHeaderText>Med fokus på det roliga</StyledHeaderText>
         </StyledInfoHeader>
         <StyledInfoWrapper>
-          <Icon.Award />
+          <StyledIconDiv><Icon.Award /></StyledIconDiv>
           <StyledFocusInfo>
             Turneringar och priser
           </StyledFocusInfo>
@@ -37,7 +31,7 @@ const Startpage = () => {
           </StyledFocusMinorInfo>
         </StyledInfoWrapper>
         <StyledInfoWrapperMiddle>
-          <Icon.BarChart2 />
+          <StyledIconDiv><Icon.BarChart2 /></StyledIconDiv>
           <StyledFocusInfo>
             Statistik
           </StyledFocusInfo>
@@ -46,7 +40,7 @@ const Startpage = () => {
           </StyledFocusMinorInfo>
         </StyledInfoWrapperMiddle>
         <StyledInfoWrapper>
-          <Icon.Users />
+          <StyledIconDiv><Icon.Users /></StyledIconDiv>
           <StyledFocusInfo>
             Medspelare
           </StyledFocusInfo>
