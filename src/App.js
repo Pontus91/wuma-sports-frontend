@@ -1,15 +1,5 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
 import StartPage from './Components/StartPage';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <StartPage />
-      </div>
-    );
-  }
-}
-
+const App = props => <StartPage />;
 export default App;
