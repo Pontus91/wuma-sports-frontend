@@ -12,6 +12,21 @@ export const StyledPublicInfo = styled.div`
   justify-content: center;
   flex-flow: row wrap;
 `
+
+export const StyledMottoWrapper = styled.div`
+  height: 50px;
+  width: 100%;
+`
+
+export const StyledMottoText = styled.div`
+  font-family: 'Maven Pro', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 25px;
+  color: #59A5D8;
+  margin-top: 20px;
+`
+
 export const StyledInfoWrapper = styled.div`
   flex: 1;
   padding-right: 15px;

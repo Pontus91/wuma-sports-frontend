@@ -1,6 +1,6 @@
 import React from 'react';
-import Motto from '../Motto';
 import * as Icon from 'react-feather';
+import staticData from '../../staticData';
 
 import {
   StyledContainer,
@@ -8,40 +8,22 @@ import {
   StyledInfoWrapper,
   StyledIconDiv,
   StyledFocusInfo,
-  StyledFocusMinorInfo
+  StyledFocusMinorInfo,
+  StyledMottoWrapper,
+  StyledMottoText
+  
 
 } from './StyledStartPage';
 
-const links = [
-  {
-    icon: "Award",
-    title: 'Turneringar och priser',
-    subtitle: 'Skapa turneringar både gratis och med kostnad och tävla emot vänner, familj och andra spelare',
-    id: 1
-  },
-  {
-    icon: "BarChart2",
-    title: "Statistik",
-    subtitle: "Spara statistik på dina padelmatcher och dina slag i bowling",
-    id: 2
-  },
-  {
-    icon: "Users",
-    title: "Medspelare",
-    subtitle: "Spela med dina vänner och hitta nya medspelare",
-    id: 3
-  }
-];
-
-
-
 const Startpage = () => {
-  
+
   return (
     <StyledContainer>
       <StyledPublicInfo>
-        <Motto />
-        { links.map(renderStyledInfoWrapper ) }
+        <StyledMottoWrapper>
+          <StyledMottoText>Med fokus på det roliga</StyledMottoText>
+        </StyledMottoWrapper>
+        {staticData.map(renderStyledInfoWrapper)}
       </StyledPublicInfo>
     </StyledContainer>
   )
@@ -55,7 +37,7 @@ const renderStyledInfoWrapper = ({ icon, title, subtitle, id }) => {
       <StyledIconDiv>
         <IconElem />
       </StyledIconDiv>
-      <StyledFocusInfo > 
+      <StyledFocusInfo >
         {title}
       </StyledFocusInfo>
       <StyledFocusMinorInfo >
