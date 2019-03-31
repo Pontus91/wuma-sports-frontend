@@ -1,3 +1,5 @@
+Run NPM install first.
+
 ### RULES ###
 
 Must use: 
@@ -7,6 +9,7 @@ Must use:
 react,
 
 redux,
+
 redux-saga,
 
 redux-first-router,
@@ -23,5 +26,6 @@ storybook,
 
 react-slick,
 
+### Merging and Pull Requests ###
 
-## RUN NPM INSTALL ##
+All PR must be reviewed by Kristofer90 and BrandtNick
