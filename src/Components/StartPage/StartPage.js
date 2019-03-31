@@ -23,7 +23,7 @@ const Startpage = () => {
         <StyledMottoWrapper>
           <StyledMottoText>Med fokus på det roliga</StyledMottoText>
         </StyledMottoWrapper>
-        {staticData.map(renderStyledInfoWrapper)}
+        {staticData.InfoWrapper.map(renderStyledInfoWrapper)}
       </StyledPublicInfo>
     </StyledContainer>
   )
