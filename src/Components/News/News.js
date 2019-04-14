@@ -12,11 +12,7 @@ import {
 
 const News = () => {
 
-  const renderStyledNewsText = ({id, text}) => {
-    return (
-      <StyledNewsText key={id}>{text}</StyledNewsText>
-    )
-  }
+  const renderStyledNewsText = ({id, text}) => <StyledNewsText key={id}>{text}</StyledNewsText>;
 
   
   return (
