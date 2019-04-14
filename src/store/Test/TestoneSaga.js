@@ -3,7 +3,8 @@ import { ACTION_UPDATE_TESTONE } from './TestoneActions'
 import { doUpdateTestone} from './TestoneActions'
 
 /**
- * MÅSTE ALLTID HA * EFTER FUNCTION HÄR PÅ SAGAN ANNARS FUNGERAR DET INTE
+ *  Funktionerna nedan måste ha * efter sig då det är generator functions. 
+ *  Generator functions deklarerar man med function* (){};
  */
 
 export function* watchUpdateTestone(){

@@ -1,4 +1,5 @@
 import { all } from 'redux-saga/effects'
+import { watchUpdateTestone } from './Test/TestoneSaga'
 
 /**
  * Generator funktion ska alltid ha * lär dig använda
@@ -6,7 +7,7 @@ import { all } from 'redux-saga/effects'
 
 export function* rootSaga(){
   yield all([
-      //
+    watchUpdateTestone()
   ])
 }
 
