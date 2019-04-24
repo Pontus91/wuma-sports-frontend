@@ -31,6 +31,7 @@ export const StyledInfoWrapper = styled.div`
   flex: 1;
   padding-right: 15px;
   padding-left: 15px;
+  height: 130px;
 
   &:nth-of-type(3){
     border-right: 1px solid #59A5D8;
