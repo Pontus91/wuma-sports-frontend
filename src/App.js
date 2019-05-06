@@ -1,6 +1,6 @@
 import React from 'react';
-import StartPage from './Components/StartPage';
+import NavBar from './Components/NavBar';
 
-const App = props => <StartPage />;
+const App = props => <NavBar />;
 
 export default App
