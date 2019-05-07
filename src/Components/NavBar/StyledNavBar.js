@@ -38,22 +38,3 @@ export const StyledAccountButtonWrapper = styled.div`
   padding: 16px;
   flex: 0 1 auto;
 `
-
-export const StyledAccountButton = styled.button`
-  text-align: center;
-  cursoir: pointer;
-  background-color: #1852af;
-  height: 32px;
-  border-style: none;
-  border-radius: 2px;
-  color: rgb(255, 255, 255);
-  font-size: 0.75rem;
-  font-weight: bold;
-  &:hover {
-    background-color: #2369dd;
-  }
-`
-
-export const StyledAccountText = styled.span`
-
-`

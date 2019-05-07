@@ -1,5 +1,6 @@
 import React from 'react';
-import { Award } from 'react-feather';
+import Button from '../Button';
+import { ButtonInfo } from '../../staticData';
 
 import {
   StyledNavBarWrapper,
@@ -8,30 +9,23 @@ import {
   StyledNavBarTextHolder,
   StyledNavBarInnerRight,
   StyledAccountButtonWrapper,
-  StyledAccountButton,
-  StyledAccountText,
-  
 } from './StyledNavBar'
 
 const NavBar = () => {
+ 
   return (
     <StyledNavBarWrapper>
       <StyledNavBarInner>
-
         <StyledNavBarInnerLeft>
           <StyledNavBarTextHolder>
-            <Award />WUMA Tourneys<Award />
+            LOGO GOES HERE
             </StyledNavBarTextHolder>
         </StyledNavBarInnerLeft>
-
         <StyledNavBarInnerRight>
           <StyledAccountButtonWrapper>
-            <StyledAccountButton>
-              <StyledAccountText>CREATE ACCOUNT</StyledAccountText>
-            </StyledAccountButton>
+              {ButtonInfo.map(Button)}
           </StyledAccountButtonWrapper>
         </StyledNavBarInnerRight>
-
       </StyledNavBarInner>
     </StyledNavBarWrapper>
   )
