@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyledAccountButton } from './StyledButton';
 
-const Button = ({text, id}) => {
+const Button = ({text}) => {
 
   return (
-    <StyledAccountButton key={id}>{text}</StyledAccountButton>
+    <StyledAccountButton>{text}</StyledAccountButton>
   )
 } 
 

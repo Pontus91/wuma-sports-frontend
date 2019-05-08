@@ -1,32 +1,35 @@
 import React from 'react';
 import Button from '../Button';
 import { ButtonInfo } from '../../staticData';
+import { CENTER, RIGHT } from '../../constants';
 
 import {
   StyledNavBarWrapper,
-  StyledNavBarInner,
-  StyledNavBarInnerLeft,
   StyledNavBarTextHolder,
-  StyledNavBarInnerRight,
+  StyledNavbarColumn,
   StyledAccountButtonWrapper,
 } from './StyledNavBar'
 
 const NavBar = () => {
+
+  /**
+   * Renders navbar buttons
+   */
+  const renderButtons = () => ButtonInfo.map(({ id, text }) => <Button key={id} text={text} />);
  
   return (
     <StyledNavBarWrapper>
-      <StyledNavBarInner>
-        <StyledNavBarInnerLeft>
-          <StyledNavBarTextHolder>
-            LOGO GOES HERE
-            </StyledNavBarTextHolder>
-        </StyledNavBarInnerLeft>
-        <StyledNavBarInnerRight>
-          <StyledAccountButtonWrapper>
-              {ButtonInfo.map(Button)}
-          </StyledAccountButtonWrapper>
-        </StyledNavBarInnerRight>
-      </StyledNavBarInner>
+      <StyledNavbarColumn alignment={CENTER}>
+        <StyledNavBarTextHolder>
+          LOGO GOES HERE
+        </StyledNavBarTextHolder>
+      </StyledNavbarColumn>
+
+      <StyledNavbarColumn alignment={RIGHT}>
+        <StyledAccountButtonWrapper>
+          { renderButtons() }
+        </StyledAccountButtonWrapper>
+      </StyledNavbarColumn>
     </StyledNavBarWrapper>
   )
 }
