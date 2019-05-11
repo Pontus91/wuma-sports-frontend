@@ -1,7 +1,10 @@
 import React from 'react';
 import * as Icon from 'react-feather';
 import { 
-  StyledMiniBannerWrapper 
+  StyledMiniBannerWrapper ,
+  StyledIconDiv,
+  StyledFocusInfo,
+  StyledFocusText
 } from './StyledMiniBanner';
 
 const MiniBanner = ({text, title, icon}) => {

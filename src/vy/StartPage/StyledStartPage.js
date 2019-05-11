@@ -9,4 +9,6 @@ export const StyledBannerWrapper = styled.div`
   width: 100%
   height: 650px;
   background-image: url(${bannerImg});
+  display: flex;
+  justify-content: center;
 `
