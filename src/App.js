@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from './Components/NavBar';
+import StartPage from './vy/StartPage';
 
-const App = props => <NavBar />;
+const App = props => <StartPage />;
 
 export default App
