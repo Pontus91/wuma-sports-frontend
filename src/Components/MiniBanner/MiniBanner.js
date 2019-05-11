@@ -1,11 +1,25 @@
 import React from 'react';
-import { StyledMiniBanner } from './StyledMiniBanner';
+import * as Icon from 'react-feather';
+import { 
+  StyledMiniBannerWrapper 
+} from './StyledMiniBanner';
 
-const MiniBanner = ({text}) => {
+const MiniBanner = ({text, title, icon}) => {
+  const IconElem = Icon[icon];
+
   return (
-    <StyledMiniBanner>{text}</StyledMiniBanner>
+    <StyledMiniBannerWrapper>
+      <StyledIconDiv>
+        <IconElem />
+      </StyledIconDiv>
+      <StyledFocusInfo>
+        {title}
+      </StyledFocusInfo>
+      <StyledFocusText>
+        {text}
+      </StyledFocusText>
+    </StyledMiniBannerWrapper>
   )
 }
 
 export default MiniBanner;
-

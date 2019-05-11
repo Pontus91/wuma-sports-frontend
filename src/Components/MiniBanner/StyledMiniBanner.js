@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledMiniBanner = styled.div`
+export const StyledMiniBannerWrapper = styled.div`
 
 `
