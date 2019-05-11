@@ -3,46 +3,33 @@ import styled from 'styled-components';
 export const StyledMiniBannerWrapper = styled.div`
   flex: 1;
   padding: 0 15px 0 15px;
-  height: 130px;
-  border: 1px solid red;
+  height: 200px;
+  border: 1px solid #1852af;
+  border-radius: 30px;
+  background: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &:nth-of-type(2){
+    margin: 0 15px 0 15px;
+  }
+
 `
 
 export const StyledIconDiv = styled.div`
-  color: red;
+  color: #fff;
 `
 
 export const StyledFocusInfo = styled.div`
   text-transform: uppercase;
   font-weight: 700;
-  color: #59A5D8
+  color: #fff;
+  font-family: 'Play', sans-serif;
+  margin: 5px 0 5px 0;
 `
 export const StyledFocusText = styled.div`
   font-size: 14px;
-  color: #59A5D8
+  color: #fff;
+  font-family: 'Play', sans-serif;
 `
-
-
-/*
-
-
-export const StyledInfoWrapper = styled.div`
-  flex: 1;
-  padding-right: 15px;
-  padding-left: 15px;
-  height: 130px;
-
-  &:nth-of-type(3){
-    border-right: 1px solid #59A5D8;
-    border-left: 1px solid #59A5D8;
-  }
-
-
-  }
-`
-
-export const StyledIconDiv = styled.div`
-  color: #59A5D8;
-`
-
-
-*/
