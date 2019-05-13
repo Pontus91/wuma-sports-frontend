@@ -17,13 +17,14 @@ const StartPage = () => {
    * Renders MiniBanners
    */
   const renderMiniBanner = () => MiniBannerInfo.map(({ id, text, title, icon }) => (
-    <MiniBanner 
-      key={id} 
-      text={text} 
-      title={title} 
-      icon={icon} 
+    <MiniBanner
+      key={id}
+      text={text}
+      title={title}
+      icon={icon}
     />
   ));
+
 
   return (
     <StyledStartPageWrapper>
