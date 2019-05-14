@@ -2,6 +2,7 @@ import React from 'react';
 import { MiniBannerInfo } from '../../staticData';
 import MiniBanner from '../../Components/MiniBanner';
 import NavBar from '../../Components/NavBar';
+import Footer from '../../Components/Footer';
 
 import {
   StyledStartPageWrapper,
@@ -34,6 +35,7 @@ const StartPage = () => {
           {renderMiniBanner()}
         </StyledBannerWrapper>
       </StyledFrontView>
+      <Footer />
     </StyledStartPageWrapper>
   )
 }
