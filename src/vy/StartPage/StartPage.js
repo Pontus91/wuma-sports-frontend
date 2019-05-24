@@ -8,7 +8,6 @@ import {
   StyledStartPageWrapper,
   StyledFrontView,
   StyledBannerWrapper
-
 } from './StyledStartPage';
 
 
@@ -25,8 +24,6 @@ const StartPage = () => {
       icon={icon}
     />
   ));
-
-
   return (
     <StyledStartPageWrapper>
       <NavBar />

@@ -8,16 +8,12 @@ export const StyledFooterWrapper = styled.div`
   justify-content: center;
   text-align: center;
 `
-
 export const StyledLinkHolder = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
-
 `
-
-
 export const StyledLink = styled.p`
   text-transform: uppercase;
   color: white;

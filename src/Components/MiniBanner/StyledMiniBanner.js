@@ -20,7 +20,6 @@ export const StyledMiniBannerWrapper = styled.div`
 export const StyledIconDiv = styled.div`
   color: #fff;
 `
-
 export const StyledFocusInfo = styled.div`
   text-transform: uppercase;
   font-weight: 700;
