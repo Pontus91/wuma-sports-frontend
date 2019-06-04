@@ -1,6 +1,12 @@
-import React from 'react';
-import StartPage from './vy/StartPage';
+import React from 'react'
+import { connect } from 'react-redux'
 
-const App = props => <StartPage />;
+import * as components from './Components/components'
 
-export default App
+const App = ({ page }) => {
+  const Component = components[page]
+  return <Component />
+}
+
+const mapStateToProps = ({ page }) => ({ page })
+export default connect(mapStateToProps)(App)
