@@ -5,5 +5,5 @@ import MainPage from '../vy/MainPage/MainPage';
 const Home = () => <StartPage />
 const Main = () => <MainPage />
  
-const NotFound = () => <h3>404</h3> 
+const NotFound = () => <h3>This is not a valid path you potato!!</h3> 
 export { Home, NotFound, Main }

@@ -1,10 +1,14 @@
-import { connectRoutes } from 'redux-first-router';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { connectRoutes } from 'redux-first-router'
+import { 
+  createStore, 
+  applyMiddleware, 
+  compose
+ } from 'redux';
 import createSagaMiddleware from "redux-saga"
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import rootReducer from '../Reducers/rootReducer'
-import { routePaths } from '../vy/index';
+import { routePaths } from '../vy/index'
 import { rootSaga } from "./rootSaga"
 
 const sagaMiddleware = createSagaMiddleware()
