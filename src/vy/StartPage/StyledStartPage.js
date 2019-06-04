@@ -12,7 +12,6 @@ export const StyledFrontView = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
-  
 `
 
 export const StyledBannerWrapper = styled.div`
