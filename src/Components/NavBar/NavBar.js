@@ -15,7 +15,7 @@ const NavBar = () => {
   /**
    * Renders navbar buttons
    */
-  const renderButtons = () => ButtonInfo.map(({ id, text }) => <Button key={id} text={text} />);
+  const renderButtons = () => ButtonInfo.map(({ id, text, path }) => <Button key={id} text={text} path={path} />);
  
   return (
     <StyledNavBarWrapper>

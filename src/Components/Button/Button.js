@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyledAccountButton } from './StyledButton';
 
-const Button = ({text}) => {
+const Button = ({ text }) => {
 
   return (
-    <StyledAccountButton>{text}</StyledAccountButton>
+      <StyledAccountButton>{text}</StyledAccountButton>
   )
-} 
+}
 
 export default Button;
 
