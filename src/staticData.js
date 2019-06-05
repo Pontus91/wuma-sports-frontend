@@ -1,10 +1,12 @@
 export const ButtonInfo = [
   {
     text: 'CREATE ACCOUNT',
+    path: '/create-account',
     id: 1
   },
   {
     text: 'LOGIN',
+    path: '/login',
     id: 2
   }
 ];
@@ -24,9 +26,13 @@ export const inputInfo = [
 
 export const LoginButtonInfo = [
   {
-    text: 'ENTER',
+    text: 'HOMEPAGE',
     id: 1
   },
+  {
+    text: 'ENTER',
+    id: 2
+  }
 ]
 
 export const MiniBannerInfo = [

@@ -12,7 +12,7 @@ export const StyledLoginWrapper = styled.div`
 
 export const StyledLoginContainer = styled.div`
   width: 100%;
-  height: 600px;
+  height: 87vh;
   display: flex;
   justify-content: center;
   background-image: url(${enterWarImg});

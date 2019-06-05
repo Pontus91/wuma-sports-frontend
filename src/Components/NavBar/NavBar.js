@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import { ButtonInfo } from '../../staticData';
+import Link from 'redux-first-router-link'
 import { CENTER, RIGHT } from '../../constants';
 
 import {
@@ -15,7 +16,7 @@ const NavBar = () => {
   /**
    * Renders navbar buttons
    */
-  const renderButtons = () => ButtonInfo.map(({ id, text, path }) => <Button key={id} text={text} path={path} />);
+  const renderButtons = () => ButtonInfo.map(({ id, text, path }) => <Link to={path} key={id}><Button text={text}/></Link>);
  
   return (
     <StyledNavBarWrapper>

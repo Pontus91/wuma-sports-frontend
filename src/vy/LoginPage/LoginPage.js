@@ -1,6 +1,7 @@
 import React from 'react'
 import Input from '../../Components/Input/Input'
 import Button from '../../Components/Button/Button'
+import Footer from '../../Components/Footer/Footer'
 import {
   inputInfo,
   LoginButtonInfo
@@ -47,7 +48,7 @@ const LoginPage = () => {
           </StyledButtonWrapper>
         </StyledLogin>
       </StyledLoginContainer>
-
+      <Footer />
     </StyledLoginWrapper>
   )
 }
