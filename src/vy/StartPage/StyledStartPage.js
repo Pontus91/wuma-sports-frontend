@@ -6,7 +6,7 @@ export const StyledStartPageWrapper = styled.div `
 `
 
 export const StyledFrontView = styled.div`
-  width: 100%
+  width: 100%;
   height: 600px;
   background-image: url(${bannerImg});
   align-items: center;

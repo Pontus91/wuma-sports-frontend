@@ -2,18 +2,25 @@ import React from 'react';
 import profileImage from '../../images/template.png';
 import {
   StyledMainWrapper,
-  StyledFlexContainer,
+  StyledFlexWrapper,
   StyledProfileImage,
-  StyledProfileName
+  StyledProfileName,
+  StyledProfileLinksContainer,
+  StyledButton
 } from './StyledProfileBox'
 
 const ProfileBox = () => {
   return (
     <StyledMainWrapper>
-      <StyledFlexContainer>
+      <StyledFlexWrapper>
         <StyledProfileImage src={profileImage} />
         <StyledProfileName>Joelmosen</StyledProfileName>
-      </StyledFlexContainer>
+      </StyledFlexWrapper>
+      <StyledProfileLinksContainer>
+        <StyledButton>
+          Min Profil
+        </StyledButton>
+      </StyledProfileLinksContainer>
     </StyledMainWrapper>
   )
 }
