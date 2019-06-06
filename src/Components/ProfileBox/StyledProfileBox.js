@@ -12,14 +12,6 @@ export const StyledFlexWrapper = styled.div`
   align-items: center;
 `
 
-/* export const StyledInnerFlexWrapper = styled.div`
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 0 auto;
-` */
-
 export const StyledProfileLinksContainer = styled.div`
   border-top: 1px solid #1852af;
   padding: .25rem 0;
