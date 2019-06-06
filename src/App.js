@@ -1,12 +1,10 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import Views from './vy/index'
 
-import * as components from './Components/components'
-
-const App = ({ page }) => {
-  const Component = components[page]
-  return <Component />
+const App = () => {
+  return(
+    <Views />
+  )
 }
 
-const mapStateToProps = ({ page }) => ({ page })
-export default connect(mapStateToProps)(App)
+export default App
