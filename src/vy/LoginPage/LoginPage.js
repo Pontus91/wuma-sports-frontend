@@ -9,7 +9,7 @@ import {
 } from './StyledLoginPage'
 
 const LoginPage = () => {
-
+  
   return (
     <StyledLoginWrapper>
       <StyledLoginContainer>
