@@ -9,13 +9,22 @@ import {
 } from './StyledLoginPage'
 
 const LoginPage = () => {
-  
+
+  const signOut = () => {
+    const auth2 = window.gapi.auth2.getAuthInstance();
+    auth2.signOut().then(() => {
+      console.log('You have been logged out!');
+      
+    });
+  }
+
   return (
     <StyledLoginWrapper>
       <StyledLoginContainer>
         <StyledLogin>
           <StyledLoginHeader>Login</StyledLoginHeader>
           <div className="g-signin2" data-onsuccess="onSignIn"></div>
+          <a href="#" onClick={signOut}>SIGN OOOOOOTTTTTT</a>
           <StyledButtonWrapper>
           </StyledButtonWrapper>
         </StyledLogin>
