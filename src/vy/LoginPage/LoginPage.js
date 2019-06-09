@@ -1,6 +1,10 @@
 import React from 'react'
 import Footer from '../../Components/Footer/Footer'
 import {
+  GoogleLogin,
+  GoogleLogout
+} from 'react-google-login';
+import {
   StyledLoginWrapper,
   StyledLoginContainer,
   StyledLogin,
@@ -10,11 +14,14 @@ import {
 
 const LoginPage = () => {
 
+  const responseGoogle = (response) => {
+    console.log(response);
+  }
+
   const signOut = () => {
     const auth2 = window.gapi.auth2.getAuthInstance();
     auth2.signOut().then(() => {
       console.log('You have been logged out!');
-      
     });
   }
 
@@ -23,8 +30,18 @@ const LoginPage = () => {
       <StyledLoginContainer>
         <StyledLogin>
           <StyledLoginHeader>Login</StyledLoginHeader>
-          <div className="g-signin2" data-onsuccess="onSignIn"></div>
-          <a href="#" onClick={signOut}>SIGN OOOOOOTTTTTT</a>
+          <GoogleLogin
+            clientId="341746166149-v1r66sqcp4o1v08hk5d6u8gt81h3aedj.apps.googleusercontent.com"
+            buttonText="Login"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+          />
+          <GoogleLogout
+            buttonText="Logout"
+            onLogoutSuccess={signOut}
+          >
+          </GoogleLogout>
           <StyledButtonWrapper>
           </StyledButtonWrapper>
         </StyledLogin>
