@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 export const routePaths = {
   'HOME': '/',
   'MAIN': '/main',
-  'LOGIN': '/login'
+  'LOGIN': '/login',
+  'CREATE_ACCOUNT': '/create-account'
 }
 
 const Views = ({ page }) => {
