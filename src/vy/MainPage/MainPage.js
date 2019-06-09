@@ -1,8 +1,14 @@
 import React from 'react'
+import ProfileBox from '../../Components/ProfileBox'
+import {
+  StyledMainWrapper,
+} from './StyledMainPage'
 
 const MainPage = () => {
   return (
-    <div></div>
+    <StyledMainWrapper>
+      <ProfileBox />
+    </StyledMainWrapper>
   )
 }
 
