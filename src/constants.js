@@ -6,3 +6,4 @@ export const BOTTOM = 'bottom';
 export const MIDDLE = 'middle';
 export const HOME = 'Home';
 export const MAIN = 'Main';
+export const LOGIN = 'Login';
