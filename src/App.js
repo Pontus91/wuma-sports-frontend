@@ -1,6 +1,10 @@
-import React from 'react';
-import StartPage from './vy/StartPage';
+import React from 'react'
+import Views from './vy/index'
 
-const App = props => <StartPage />;
+const App = () => {
+  return(
+    <Views />
+  )
+}
 
 export default App
