@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const StyledMainWrapper = styled.section`
   background-color: #000;
-  max-width: 300px;
+  min-width: 300px;
   border-radius: 4px;
   border: 2px solid #1852af;
-`;
+`
 
 export const StyledFlexWrapper = styled.div`
   display: flex;
