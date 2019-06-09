@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { MAIN } from '../../constants'
 import Footer from '../../Components/Footer/Footer'
 import { connect } from 'react-redux'
 import { GoogleLogin } from 'react-google-login';
@@ -10,16 +11,17 @@ import {
   StyledButtonWrapper
 } from './StyledLoginPage'
 import { updateUser } from '../../store/Test/TestoneActions';
+import { actionToMain } from '../../Reducers/pageReducer';
 
-class LoginPage extends Component {
+const LoginPage = ({ redirectUrl, userInformation}) => {
 
-   responseGoogle = (response) => {
+   const responseGoogle = (response) => {
     const info = response.profileObj.email;
-    this.props.userInformation.email = info;
+    userInformation.email = info;
+    redirectUrl(MAIN);
     
   }
 
-  render(){
   return (
     <StyledLoginWrapper>
       <StyledLoginContainer>
@@ -28,8 +30,8 @@ class LoginPage extends Component {
           <GoogleLogin
             clientId="341746166149-v1r66sqcp4o1v08hk5d6u8gt81h3aedj.apps.googleusercontent.com"
             buttonText="Login"
-            onSuccess={this.responseGoogle}
-            onFailure={this.responseGoogle}
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
             cookiePolicy={'single_host_origin'}
           />
           <StyledButtonWrapper>
@@ -39,7 +41,6 @@ class LoginPage extends Component {
       <Footer />
     </StyledLoginWrapper>
   )
-  }
 }
 
 const mapStateToProps = state => {
@@ -49,7 +50,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  responseGoogle: (data) => dispatch(updateUser(data))
+  responseGoogle: (data) => dispatch(updateUser(data)),
+  redirectUrl: type => dispatch(actionToMain(type))
 })
 
 

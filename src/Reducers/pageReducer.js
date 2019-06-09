@@ -11,5 +11,11 @@ const components = {
   LOGIN,
   [NOT_FOUND]: 'NotFound'
 }
- 
-export default (state = 'HOME', action = {}) => components[action.type] || state
+
+const actionToMain = type => ({type});
+const page = (state = 'HOME', action = {}) => components[action.type] || state
+
+export {
+  actionToMain,
+  page
+}
