@@ -1,10 +1,10 @@
 import initialState from '../initialState'
-import { UPDATE_TESTONE } from './TestoneActions'
+import { UPDATE_USER } from './TestoneActions'
 
-export default function(state = initialState.testone, action) {
+export default function(state = initialState.user, action) {
   switch(action.type) {
-    case UPDATE_TESTONE:
-      return { ...state, testoneEvent: { ...state.testoneEvent, ...action.data }}
+    case UPDATE_USER:
+      return { ...state, userInformation: { ...state.userInformation, ...action.data }}
 
     default:
       return state

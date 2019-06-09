@@ -1,20 +1,20 @@
 import { takeEvery, put } from 'redux-saga/effects'
-import { ACTION_UPDATE_TESTONE } from './TestoneActions'
-import { doUpdateTestone} from './TestoneActions'
+import { ACTION_UPDATE_USER } from './TestoneActions'
+import { doUpdateUser} from './TestoneActions'
 
 /**
  *  Funktionerna nedan måste ha * efter sig då det är generator functions. 
  *  Generator functions deklarerar man med function* (){};
  */
 
-export function* watchUpdateTestone(){
+export function* watchUpdateUser(){
 
   yield takeEvery(
-    ACTION_UPDATE_TESTONE,
-    makeUpdateTestone
+    ACTION_UPDATE_USER,
+    makeUpdateUser
   )
 }
 
-function* makeUpdateTestone(action){
-  yield put(doUpdateTestone(action.data))
+function* makeUpdateUser(action){
+  yield put(doUpdateUser(action.data))
 }

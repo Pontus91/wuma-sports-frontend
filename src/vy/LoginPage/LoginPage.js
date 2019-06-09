@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Footer from '../../Components/Footer/Footer'
+import { connect } from 'react-redux'
 import { GoogleLogin } from 'react-google-login';
 import {
   StyledLoginWrapper,
@@ -8,14 +9,17 @@ import {
   StyledLoginHeader,
   StyledButtonWrapper
 } from './StyledLoginPage'
+import { updateUser } from '../../store/Test/TestoneActions';
 
-const LoginPage = () => {
+class LoginPage extends Component {
 
-  const responseGoogle = (response) => {
-    console.log(response);
-    window.location="/main"
+   responseGoogle = (response) => {
+    const info = response.profileObj.email;
+    this.props.userInformation.email = info;
+    
   }
 
+  render(){
   return (
     <StyledLoginWrapper>
       <StyledLoginContainer>
@@ -24,8 +28,8 @@ const LoginPage = () => {
           <GoogleLogin
             clientId="341746166149-v1r66sqcp4o1v08hk5d6u8gt81h3aedj.apps.googleusercontent.com"
             buttonText="Login"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
+            onSuccess={this.responseGoogle}
+            onFailure={this.responseGoogle}
             cookiePolicy={'single_host_origin'}
           />
           <StyledButtonWrapper>
@@ -35,6 +39,20 @@ const LoginPage = () => {
       <Footer />
     </StyledLoginWrapper>
   )
+  }
 }
 
-export default LoginPage;
+const mapStateToProps = state => {
+  return {
+    userInformation: state.user.userInformation
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  responseGoogle: (data) => dispatch(updateUser(data))
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
+
+

@@ -1,12 +1,12 @@
-export const ACTION_UPDATE_TESTONE = 'ACTION_UPDATE_TESTONE'
-export const UPDATE_TESTONE = 'UPDATE_TESTONE'
+export const ACTION_UPDATE_USER = 'ACTION_UPDATE_USER'
+export const UPDATE_USER = 'UPDATE_USER'
 
-export const updateTestone = data => ({
-  type: ACTION_UPDATE_TESTONE,
+export const updateUser = data => ({
+  type: ACTION_UPDATE_USER,
   data
 });
 
-export const doUpdateTestone = (data) => ({
-  type: UPDATE_TESTONE,
+export const doUpdateUser = (data) => ({
+  type: UPDATE_USER,
   data
 })

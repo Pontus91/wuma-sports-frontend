@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from "react-redux"
 import profileImage from '../../images/template.png';
 import { GoogleLogout } from 'react-google-login';
 import {
@@ -10,9 +11,9 @@ import {
   StyledButton
 } from './StyledProfileBox'
 
-const ProfileBox = () => {
+class ProfileBox extends Component {
 
-  const signOut = () => {
+  signOut = () => {
     const auth2 = window.gapi.auth2.getAuthInstance();
     auth2.signOut().then(() => {
       console.log('You have been logged out!');
@@ -20,25 +21,32 @@ const ProfileBox = () => {
     window.location = "/login"
   }
 
-
-  return (
-    <StyledMainWrapper>
-      <StyledFlexWrapper>
-        <StyledProfileImage src={profileImage} />
-        <StyledProfileName>Joelmosen</StyledProfileName>
-      </StyledFlexWrapper>
-      <StyledProfileLinksContainer>
-        <StyledButton>
-          Min Profil
+  render() {
+    return (
+      <StyledMainWrapper>
+        <StyledFlexWrapper>
+          <StyledProfileImage src={profileImage} />
+          <StyledProfileName>{this.props.userInformation.email}</StyledProfileName>
+        </StyledFlexWrapper>
+        <StyledProfileLinksContainer>
+          <StyledButton>
+            Min Profil
         </StyledButton>
-        <GoogleLogout
-          buttonText="Logout"
-          onLogoutSuccess={signOut}
-        >
-        </GoogleLogout>
-      </StyledProfileLinksContainer>
-    </StyledMainWrapper>
-  )
+          <GoogleLogout
+            buttonText="Logout"
+            onLogoutSuccess={this.signOut}
+          >
+          </GoogleLogout>
+        </StyledProfileLinksContainer>
+      </StyledMainWrapper>
+    )
+  }
 }
 
-export default ProfileBox
+const mapStateToProps = state => {
+  return {
+    userInformation: state.user.userInformation
+  }
+}
+
+export default connect(mapStateToProps)(ProfileBox)

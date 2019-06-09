@@ -1,9 +1,8 @@
 export default {
-  testone: {
-    testoneEvent: {
-      title: '',
-      name: '',
-      age: '',
+  user: {
+    userInformation: {
+      email: '',
     }
   }
 }
+

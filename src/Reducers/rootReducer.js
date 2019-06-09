@@ -9,5 +9,5 @@ const { reducer: location } = connectRoutes(routePaths)
 export default combineReducers({
   location,
   page,
-  testone: TestoneReducer
+  user: TestoneReducer
  });
