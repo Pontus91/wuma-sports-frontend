@@ -1,4 +1,4 @@
-import axios from 'react'
+import axios from 'axios'
 
   const verifyToken = () => {
     const currentToken = localStorage.getItem('token')
