@@ -2,6 +2,7 @@ import React from 'react'
 import { MAIN } from '../../constants'
 import Footer from '../../Components/Footer/Footer'
 import { connect } from 'react-redux'
+import verifyToken from '../../API/requests'
 import {
   StyledLoginWrapper,
   StyledLoginContainer,
@@ -22,8 +23,10 @@ const LoginPage = ({ redirectUrl, userInformation}) => {
    const responseGoogle = (response) => {
     const info = response.profileObj.email;
     userInformation.email = info;
+    const token = response.accessToken
+    localStorage.setItem("token", token)
+    verifyToken()
     redirectUrl(MAIN);
-    
   }
 
   return (
