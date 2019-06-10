@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import enterWarImg from '../../images/enter-war.jpg'
+import GoogleLogin from 'react-google-login';
 
 export const StyledLoginWrapper = styled.div`
   background: #1f1f1f;
@@ -24,6 +25,9 @@ export const StyledLogin = styled.div`
   width: 33.3%;
   height: 450px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 export const StyledLoginHeader = styled.h3`
   text-transform: uppercase;
@@ -46,4 +50,14 @@ export const StyledFormWrapper = styled.div`
 export const StyledButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
+`
+
+export const GoogleButton = styled(GoogleLogin)`
+  width: 240px;
+  height: 50px;
+  border: 1px solid #4285f4 !important;
+  &:hover{
+    background: #4285f4 !important;
+    opacity: 1 !important;
+  }
 `

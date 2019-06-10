@@ -2,13 +2,13 @@ import React from 'react'
 import { MAIN } from '../../constants'
 import Footer from '../../Components/Footer/Footer'
 import { connect } from 'react-redux'
-import { GoogleLogin } from 'react-google-login';
 import {
   StyledLoginWrapper,
   StyledLoginContainer,
   StyledLogin,
   StyledLoginHeader,
-  StyledButtonWrapper
+  StyledButtonWrapper,
+  GoogleButton
 } from './StyledLoginPage'
 import { updateUser } from '../../store/User/UserActions';
 import { actionToMain } from '../../Reducers/pageReducer';
@@ -31,7 +31,7 @@ const LoginPage = ({ redirectUrl, userInformation}) => {
       <StyledLoginContainer>
         <StyledLogin>
           <StyledLoginHeader>Login</StyledLoginHeader>
-          <GoogleLogin
+          <GoogleButton
             clientId="341746166149-v1r66sqcp4o1v08hk5d6u8gt81h3aedj.apps.googleusercontent.com"
             buttonText="Login"
             onSuccess={responseGoogle}
