@@ -10,11 +10,15 @@ import {
   StyledLoginHeader,
   StyledButtonWrapper
 } from './StyledLoginPage'
-import { updateUser } from '../../store/Test/TestoneActions';
+import { updateUser } from '../../store/User/UserActions';
 import { actionToMain } from '../../Reducers/pageReducer';
 
 const LoginPage = ({ redirectUrl, userInformation}) => {
 
+  /**
+   * 
+   * Google login function
+   */
    const responseGoogle = (response) => {
     const info = response.profileObj.email;
     userInformation.email = info;
@@ -53,7 +57,6 @@ const mapDispatchToProps = dispatch => ({
   responseGoogle: (data) => dispatch(updateUser(data)),
   redirectUrl: type => dispatch(actionToMain(type))
 })
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
 

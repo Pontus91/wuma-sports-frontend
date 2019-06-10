@@ -13,10 +13,12 @@ import {
 
 class ProfileBox extends Component {
 
+  /**
+   * Google signout function
+   */
   signOut = () => {
     const auth2 = window.gapi.auth2.getAuthInstance();
     auth2.signOut().then(() => {
-      console.log('You have been logged out!');
     });
     window.location = "/login"
   }

@@ -7,6 +7,9 @@ import { LinkBannerInfo } from '../../staticData'
 
 const LinkBanner = () => {
 
+  /**
+   * Rendering links
+   */
   const renderLinks = () => {
     return LinkBannerInfo.map(({ text, id }) => <StyledLink key={id}>{text}</StyledLink>)
   }

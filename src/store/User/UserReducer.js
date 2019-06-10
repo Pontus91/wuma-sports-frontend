@@ -1,5 +1,5 @@
 import initialState from '../initialState'
-import { UPDATE_USER } from './TestoneActions'
+import { UPDATE_USER } from './UserActions'
 
 export default function(state = initialState.user, action) {
   switch(action.type) {

@@ -1,5 +1,5 @@
 import { all } from 'redux-saga/effects'
-import { watchUpdateUser } from './Test/TestoneSaga'
+import { watchUpdateUser } from './User/UserSaga'
 
 /**
  * Generator funktion ska alltid ha * lär dig använda

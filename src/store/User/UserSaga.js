@@ -1,6 +1,6 @@
 import { takeEvery, put } from 'redux-saga/effects'
-import { ACTION_UPDATE_USER } from './TestoneActions'
-import { doUpdateUser} from './TestoneActions'
+import { ACTION_UPDATE_USER } from './UserActions'
+import { doUpdateUser} from './UserActions'
 
 /**
  *  Funktionerna nedan måste ha * efter sig då det är generator functions. 
