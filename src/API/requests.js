@@ -5,7 +5,6 @@ import axios from 'axios'
    */
   const verifyToken = () => {
     const currentToken = localStorage.getItem('token')
-    console.log(currentToken)
     axios.post('http://localhost:3001/api/verifyToken', {
       "token": currentToken,
     })
