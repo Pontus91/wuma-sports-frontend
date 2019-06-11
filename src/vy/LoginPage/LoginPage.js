@@ -23,7 +23,7 @@ const LoginPage = ({ redirectUrl, userInformation}) => {
    const responseGoogle = (response) => {
     const info = response.profileObj.email;
     userInformation.email = info;
-    const token = response.accessToken
+    const token = response.getAuthResponse().id_token;
     localStorage.setItem("token", token)
     verifyToken()
     redirectUrl(MAIN);
