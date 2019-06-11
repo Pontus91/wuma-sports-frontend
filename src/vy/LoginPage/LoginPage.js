@@ -11,18 +11,16 @@ import {
   StyledButtonWrapper,
   GoogleButton
 } from './StyledLoginPage'
-import { updateUser } from '../../store/User/UserActions';
 import { actionToMain } from '../../Reducers/pageReducer';
 
-const LoginPage = ({ redirectUrl, userInformation}) => {
+const LoginPage = ({ redirectUrl }) => {
 
   /**
    * 
    * Google login function
    */
    const responseGoogle = (response) => {
-    const info = response.profileObj.email;
-    userInformation.email = info;
+    
     const token = response.getAuthResponse().id_token;
     localStorage.setItem("token", token)
     verifyToken()
@@ -50,17 +48,10 @@ const LoginPage = ({ redirectUrl, userInformation}) => {
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    userInformation: state.user.userInformation
-  }
-}
-
 const mapDispatchToProps = dispatch => ({
-  responseGoogle: (data) => dispatch(updateUser(data)),
   redirectUrl: type => dispatch(actionToMain(type))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
+export default connect(null, mapDispatchToProps)(LoginPage)
 
 

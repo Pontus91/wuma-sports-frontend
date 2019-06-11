@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux"
 import profileImage from '../../images/template.png';
 import { GoogleLogout } from 'react-google-login';
 import {
@@ -28,7 +27,7 @@ class ProfileBox extends Component {
       <StyledMainWrapper>
         <StyledFlexWrapper>
           <StyledProfileImage src={profileImage} />
-          <StyledProfileName>{this.props.userInformation.email}</StyledProfileName>
+          <StyledProfileName>MAIL KMR HÄR</StyledProfileName>
         </StyledFlexWrapper>
         <StyledProfileLinksContainer>
           <StyledButton>
@@ -45,10 +44,4 @@ class ProfileBox extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    userInformation: state.user.userInformation
-  }
-}
-
-export default connect(mapStateToProps)(ProfileBox)
+export default ProfileBox
