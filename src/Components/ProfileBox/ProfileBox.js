@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import profileImage from '../../images/template.png';
 import { GoogleLogout } from 'react-google-login';
+import { getUser } from '../../API/requests'
 import {
   StyledMainWrapper,
   StyledFlexWrapper,
@@ -11,6 +12,10 @@ import {
 } from './StyledProfileBox'
 
 class ProfileBox extends Component {
+
+  componentDidMount() {
+    getUser()
+  }
 
   /**
    * Google signout function
