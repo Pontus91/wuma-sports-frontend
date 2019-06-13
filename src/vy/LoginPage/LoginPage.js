@@ -2,7 +2,6 @@ import React from 'react'
 import { MAIN } from '../../constants'
 import Footer from '../../Components/Footer/Footer'
 import { connect } from 'react-redux'
-import { verifyToken } from '../../API/requests'
 import {
   StyledLoginWrapper,
   StyledLoginContainer,
@@ -23,7 +22,6 @@ const LoginPage = ({ redirectUrl }) => {
     
     const token = response.getAuthResponse().id_token;
     localStorage.setItem("token", token)
-    verifyToken()
     redirectUrl(MAIN);
   }
 
