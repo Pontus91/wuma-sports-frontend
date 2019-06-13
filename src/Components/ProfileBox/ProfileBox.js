@@ -29,13 +29,11 @@ class ProfileBox extends Component {
   }
 
   render() {
-
-    const { user } = this.props;
     return (
       <StyledMainWrapper>
         <StyledFlexWrapper>
           <StyledProfileImage src={profileImage} />
-          <StyledProfileName>{user}</StyledProfileName>
+          <StyledProfileName>{this.props.userInfo.user}</StyledProfileName>
         </StyledFlexWrapper>
         <StyledProfileLinksContainer>
           <StyledButton>
@@ -54,9 +52,7 @@ class ProfileBox extends Component {
 
 const mapStateToProps = state => {
   return {
-    fetching: state.fetching,
-    user: state.user,
-    error: state.error
+    userInfo: state.userInfo
   };
 };
 

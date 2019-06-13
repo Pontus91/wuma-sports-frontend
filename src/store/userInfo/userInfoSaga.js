@@ -8,7 +8,7 @@ export function* watcherSaga(){
 function fetchUser(){
   return axios({
     method: "get",
-    url: "",
+    url: "http://localhost:3001/api/userDetails",
   });
 }
 
