@@ -2,7 +2,7 @@ import axios from 'axios'
 const currentToken = localStorage.getItem('token')
 
 const headers = {
-  "Bearer": currentToken,
+  "Authorization": `Bearer ${currentToken}`,
 }
 
 /**
