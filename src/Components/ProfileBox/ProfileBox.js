@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import profileImage from '../../images/template.png';
 import { GoogleLogout } from 'react-google-login';
+import { connect } from 'react-redux'
 import { getUser } from '../../API/requests'
 import {
   StyledMainWrapper,
@@ -28,11 +29,13 @@ class ProfileBox extends Component {
   }
 
   render() {
+
+    const { user } = this.props;
     return (
       <StyledMainWrapper>
         <StyledFlexWrapper>
           <StyledProfileImage src={profileImage} />
-          <StyledProfileName>MAIL KMR HÄR</StyledProfileName>
+          <StyledProfileName>{user}</StyledProfileName>
         </StyledFlexWrapper>
         <StyledProfileLinksContainer>
           <StyledButton>
@@ -49,4 +52,18 @@ class ProfileBox extends Component {
   }
 }
 
-export default ProfileBox
+const mapStateToProps = state => {
+  return {
+    fetching: state.fetching,
+    user: state.user,
+    error: state.error
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onRequestDog: () => dispatch({ type: "API_CALL_REQUEST" })
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileBox)
