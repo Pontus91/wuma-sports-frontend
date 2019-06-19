@@ -12,9 +12,8 @@ import {
 } from './StyledProfileBox'
 
 class ProfileBox extends Component {
-
   componentDidMount() {
-    
+    this.props.onRequestEmail()
   }
 
   /**
@@ -28,12 +27,11 @@ class ProfileBox extends Component {
   }
 
   render() {
-    const { onRequestEmail, email } = this.props
     return (
       <StyledMainWrapper>
         <StyledFlexWrapper>
           <StyledProfileImage src={profileImage} />
-          <StyledProfileName><button onClick={onRequestEmail}>test?</button>MAIL KMR HÄR{email}</StyledProfileName>
+          <StyledProfileName>{this.props.email}</StyledProfileName>
         </StyledFlexWrapper>
         <StyledProfileLinksContainer>
           <StyledButton>
@@ -53,8 +51,8 @@ class ProfileBox extends Component {
 const mapStateToProps = state => {
   console.log(state)
   return {
-    fetching: state.fetching,
-    email: state.email
+    fetching: state.user.fetching,
+    email: state.user.email
   }
 }
 
