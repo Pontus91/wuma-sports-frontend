@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import profileImage from '../../images/template.png';
 import { GoogleLogout } from 'react-google-login';
 import { getUser } from '../../API/requests'
+import { connect } from 'react-redux'
 import {
   StyledMainWrapper,
   StyledFlexWrapper,
@@ -49,4 +50,11 @@ class ProfileBox extends Component {
   }
 }
 
-export default ProfileBox
+const mapStateToProps = state => {
+  console.log(state)
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps)(ProfileBox)
