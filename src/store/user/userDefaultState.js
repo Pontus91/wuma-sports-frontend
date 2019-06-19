@@ -1,3 +1,4 @@
 export default {
-  email: ''
+  email: null,
+  fetching: false,
 }

@@ -1,2 +1,2 @@
 export const ACTION_USER_SUCCESS = 'ACTION_USER_SUCCESS'
-
+export const USER_REQUEST = 'USER_REQUEST'
