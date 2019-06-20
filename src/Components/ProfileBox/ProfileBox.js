@@ -49,7 +49,6 @@ class ProfileBox extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state)
   return {
     fetching: state.user.fetching,
     email: state.user.email
