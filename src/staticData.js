@@ -11,30 +11,6 @@ export const ButtonInfo = [
   }
 ];
 
-export const inputInfo = [
-  {
-    name: 'Account Name',
-    placeholder: '...',
-    id: 1
-  },
-  {
-    name: 'Password',
-    placeholder: '...',
-    id: 2
-  }
-]
-
-export const LoginButtonInfo = [
-  {
-    text: 'HOMEPAGE',
-    id: 1
-  },
-  {
-    text: 'ENTER',
-    id: 2
-  }
-]
-
 export const MiniBannerInfo = [
   {
     icon: "Award",
@@ -76,7 +52,5 @@ export default {
   ButtonInfo,
   MiniBannerInfo,
   LinkBannerInfo,
-  LoginButtonInfo,
-  inputInfo
 }
 

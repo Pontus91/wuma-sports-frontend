@@ -14,14 +14,6 @@ const verifyToken = () => {
   })
 }
 
-/**
- * Gets user from our mongo database using Axios
- */
-const getUser = () => {
-  axios.get('http://localhost:3001/api/userDetails', { headers });
-}
-
 export {
   verifyToken,
-  getUser
 } 
