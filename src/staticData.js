@@ -32,25 +32,8 @@ export const MiniBannerInfo = [
   }
 ];
 
-export const LinkBannerInfo = [
-  {
-    text: 'Turneringar',
-    id: 1
-  },
-  {
-    text: 'Skapa Turnering',
-    id: 2
-  },
-  {
-    text: 'Vänner',
-    id: 3
-  }
-]
-
-
 export default {
   ButtonInfo,
   MiniBannerInfo,
-  LinkBannerInfo,
 }
 

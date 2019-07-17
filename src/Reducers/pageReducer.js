@@ -12,10 +12,10 @@ const components = {
   [NOT_FOUND]: 'NotFound'
 }
 
-const actionToMain = type => ({type});
+const redirectRoute = type => ({type});
 const page = (state = 'HOME', action = {}) => components[action.type] || state
 
 export {
-  actionToMain,
+  redirectRoute,
   page
 }

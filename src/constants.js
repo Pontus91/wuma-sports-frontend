@@ -1,9 +1,9 @@
-export const LEFT = 'left';
-export const RIGHT = 'right';
-export const CENTER = 'center';
-export const TOP = 'top';
-export const BOTTOM = 'bottom';
-export const MIDDLE = 'middle';
+export const LEFT = 'LEFT';
+export const RIGHT = 'RIGHT';
+export const CENTER = 'CENTER';
+export const TOP = 'TOP';
+export const BOTTOM = 'BOTTOM';
+export const MIDDLE = 'MIDDLE';
 export const HOME = 'HOME';
 export const MAIN = 'MAIN';
 export const LOGIN = 'LOGIN';

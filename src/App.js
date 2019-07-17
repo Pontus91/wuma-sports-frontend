@@ -1,10 +1,6 @@
 import React from 'react'
-import Views from './vy/index'
+import Views from './views/index'
 
-const App = () => {
-  return(
-    <Views />
-  )
-}
+const App = () => <Views />;
 
 export default App

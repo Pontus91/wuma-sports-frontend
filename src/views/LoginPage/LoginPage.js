@@ -10,16 +10,14 @@ import {
   StyledButtonWrapper,
   GoogleButton
 } from './StyledLoginPage'
-import { actionToMain } from '../../Reducers/pageReducer';
+import { redirectRoute } from '../../Reducers/pageReducer';
 
 const LoginPage = ({ redirectUrl }) => {
 
   /**
-   * 
    * Google login function
    */
    const responseGoogle = (response) => {
-    
     const token = response.getAuthResponse().id_token;
     localStorage.setItem("token", token)
     redirectUrl(MAIN);
@@ -47,7 +45,7 @@ const LoginPage = ({ redirectUrl }) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  redirectUrl: type => dispatch(actionToMain(type))
+  redirectUrl: type => dispatch(redirectRoute(type))
 })
 
 export default connect(null, mapDispatchToProps)(LoginPage)

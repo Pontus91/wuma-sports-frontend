@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { connectRoutes } from 'redux-first-router';
-import { routePaths } from '../vy/index';
+import { routePaths } from '../views/index';
 import { page } from './pageReducer'
 import { reducer as user } from '../store/user/userReducer'
 

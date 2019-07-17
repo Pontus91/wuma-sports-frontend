@@ -1,7 +1,7 @@
 import React from 'react';
-import StartPage from '../vy/StartPage/StartPage';
-import MainPage from '../vy/MainPage/MainPage';
-import LoginPage from '../vy/LoginPage/LoginPage';
+import StartPage from '../views/StartPage/StartPage';
+import MainPage from '../views/MainPage/MainPage';
+import LoginPage from '../views/LoginPage/LoginPage';
  
 const HOME = () => <StartPage />
 const MAIN = () => <MainPage />

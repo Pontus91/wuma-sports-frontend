@@ -8,7 +8,7 @@ import createSagaMiddleware from "redux-saga"
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import rootReducer from '../Reducers/rootReducer'
-import { routePaths } from '../vy/index'
+import { routePaths } from '../views/index'
 import { rootSaga } from "./rootSaga"
 
 const sagaMiddleware = createSagaMiddleware()
