@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
-import profileImage from '../../images/template.png';
 import { GoogleLogout } from 'react-google-login';
 import { connect } from 'react-redux'
-import { USER_REQUEST } from '../../store/user/userActions'
+import { loadUser } from '../../store/user/userActions'
 import {
   StyledMainWrapper,
   StyledFlexWrapper,
@@ -22,6 +21,7 @@ class ProfileBox extends PureComponent {
    */
   signOut = () => {
     const auth2 = window.gapi.auth2.getAuthInstance();
+    localStorage.removeItem("token")
     auth2.signOut().then(() => window.location = "/login");
   }
 
@@ -29,7 +29,7 @@ class ProfileBox extends PureComponent {
     return (
       <StyledMainWrapper>
         <StyledFlexWrapper>
-          <StyledProfileImage src={profileImage} />
+          <StyledProfileImage src="/images/template.png" />
           <StyledProfileName>{this.props.email}</StyledProfileName>
         </StyledFlexWrapper>
         <StyledProfileLinksContainer>
@@ -48,6 +48,7 @@ class ProfileBox extends PureComponent {
 }
 
 const mapStateToProps = state => {
+  console.log(state)
   return {
     fetching: state.user.fetching,
     email: state.user.email
@@ -56,7 +57,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onRequestEmail: () => dispatch({type: USER_REQUEST })
+    onRequestEmail: (data) => dispatch(loadUser(data))
   }
 }
 

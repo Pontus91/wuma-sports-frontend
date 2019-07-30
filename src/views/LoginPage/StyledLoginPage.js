@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import enterWarImg from '../../images/enter-war.jpg'
 import GoogleLogin from 'react-google-login';
 
 export const StyledLoginWrapper = styled.div`
@@ -16,7 +15,7 @@ export const StyledLoginContainer = styled.div`
   height: 87vh;
   display: flex;
   justify-content: center;
-  background-image: url(${enterWarImg});
+  background-image: url("/images/enter-war.jpg");
   background-size: 100%;
   background-position: bottom;
 
