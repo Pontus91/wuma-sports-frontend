@@ -1,7 +1,11 @@
 import React from 'react';
 import Button from '../Button';
 import { ButtonInfo } from '../../staticData';
-import { CENTER, RIGHT } from '../../constants';
+import Link from 'redux-first-router-link'
+import { 
+  CENTER, 
+  RIGHT 
+} from '../../constants';
 
 import {
   StyledNavBarWrapper,
@@ -15,8 +19,12 @@ const NavBar = () => {
   /**
    * Renders navbar buttons
    */
-  const renderButtons = () => ButtonInfo.map(({ id, text }) => <Button key={id} text={text} />);
- 
+  const renderButtons = () => ButtonInfo.map(({ id, text, path }) => (
+    <Link to={path} key={id}>
+      <Button text={text} />
+    </Link>
+  ));
+
   return (
     <StyledNavBarWrapper>
       <StyledNavbarColumn alignment={CENTER}>
@@ -27,7 +35,7 @@ const NavBar = () => {
 
       <StyledNavbarColumn alignment={RIGHT}>
         <StyledAccountButtonWrapper>
-          { renderButtons() }
+          {renderButtons()}
         </StyledAccountButtonWrapper>
       </StyledNavbarColumn>
     </StyledNavBarWrapper>

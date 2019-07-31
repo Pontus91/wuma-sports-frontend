@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import bannerImg from "../../images/background-victory.jpg";
 
 export const StyledStartPageWrapper = styled.div `
   width: 100%;
 `
 
 export const StyledFrontView = styled.div`
-  width: 100%
+  width: 100%;
   height: 600px;
-  background-image: url(${bannerImg});
+  background-image: url(/images/background-victory.jpg);
   align-items: center;
   justify-content: center;
   display: flex;

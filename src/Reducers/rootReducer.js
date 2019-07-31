@@ -1,6 +1,13 @@
 import { combineReducers } from 'redux';
-import TestoneReducer from '../store/Test/TestoneReducer';
+import { connectRoutes } from 'redux-first-router';
+import { routePaths } from '../views/index';
+import { page } from './pageReducer'
+import { reducer as user } from '../store/user/userReducer'
+
+const { reducer: location } = connectRoutes(routePaths)
 
 export default combineReducers({
-  testone: TestoneReducer
+  location,
+  page,
+  user
  });
