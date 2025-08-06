@@ -8,7 +8,7 @@
     "react-dom": "^16.8.4",
     "react-feather": "^1.1.6",
     "react-redux": "^6.0.1",
-    "react-scripts": "2.1.8",
+    "react-scripts": "5.0.1",
     "react-slick": "^0.23.2",
     "redux-devtools-extension": "^2.13.8",
     "redux-saga": "^1.0.2",
@@ -31,6 +31,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@storybook/react": "^5.0.6"
+    "@storybook/react": "^9.1.1"
   }
 }
